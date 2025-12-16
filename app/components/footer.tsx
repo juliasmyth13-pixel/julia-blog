@@ -25,7 +25,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             target="_blank"
             href="/rss"
-          >
+          >npm
             <ArrowIcon />
             <p className="ml-2 h-7">rss</p>
           </a>

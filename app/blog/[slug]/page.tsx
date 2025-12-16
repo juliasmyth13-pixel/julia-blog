@@ -3,7 +3,7 @@ import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
 
-/*
+/* COMMENTED OUT: This was searching for missing blog files
 export async function generateStaticParams() {
   let posts = getBlogPosts()
 
@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 }
 */
 
-/*
+/* COMMENTED OUT: This was crashing because 'post' is null
 export function generateMetadata({ params }) {
   let post = getBlogPosts().find((post) => post.slug === params.slug)
   if (!post) {
@@ -56,7 +56,7 @@ export function generateMetadata({ params }) {
 */
 
 export default function Blog({ params }) {
-  /*
+  /* COMMENTED OUT: Preventing the 'null' reading error
   let post = getBlogPosts().find((post) => post.slug === params.slug)
 
   if (!post) {
@@ -66,7 +66,8 @@ export default function Blog({ params }) {
 
   return (
     <section>
-      {/* <script
+      {/* COMMENTED OUT: The content below was trying to read from 'post'
+      <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
@@ -100,10 +101,11 @@ export default function Blog({ params }) {
         <CustomMDX source={post.content} />
       </article>
       */}
+      
       <h1 className="title font-semibold text-2xl tracking-tighter">
-        Education & Experience Details
+        Project Details
       </h1>
-      <p className="mt-4">Information will be displayed here shortly.</p>
+      <p className="mt-4">This section is currently being updated with Villanova and Vanguard information.</p>
     </section>
   )
 }

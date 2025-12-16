@@ -3,6 +3,7 @@ import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
 
+/*
 export async function generateStaticParams() {
   let posts = getBlogPosts()
 
@@ -10,7 +11,9 @@ export async function generateStaticParams() {
     slug: post.slug,
   }))
 }
+*/
 
+/*
 export function generateMetadata({ params }) {
   let post = getBlogPosts().find((post) => post.slug === params.slug)
   if (!post) {
@@ -50,17 +53,20 @@ export function generateMetadata({ params }) {
     },
   }
 }
+*/
 
 export default function Blog({ params }) {
+  /*
   let post = getBlogPosts().find((post) => post.slug === params.slug)
 
   if (!post) {
     notFound()
   }
+  */
 
   return (
     <section>
-      <script
+      {/* <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
@@ -93,6 +99,11 @@ export default function Blog({ params }) {
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
+      */}
+      <h1 className="title font-semibold text-2xl tracking-tighter">
+        Education & Experience Details
+      </h1>
+      <p className="mt-4">Information will be displayed here shortly.</p>
     </section>
   )
 }
